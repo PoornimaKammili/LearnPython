@@ -1,0 +1,27 @@
+#String Manipulation
+print("Hello world!\nHello world!\nHello world!")
+print("Hello " + "Poori!")
+print("Hello" + " Poori!")
+print("Hello" + " " + "Poori!")
+
+#Inputs
+print("Hello" + " " + input("What is your name?") + "!")
+
+#Variables
+print(len(input("What is your name?")))
+
+name = "Poori"
+print(name)
+name = "Venky"
+print(name)
+
+#Use variables for taking input and calculating length
+username = input("What is your name?")
+length = len(username)
+print(length)
+
+#Band Generator Program
+print("Welcome to the Band name generator")
+city_name = input("What is the city you grew up?\n")
+pet_name = input("What is the name of your pet?\n")
+print("Your band name could be " + city_name + " " + pet_name)
