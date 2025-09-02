@@ -1,0 +1,83 @@
+#Datatypes
+#1.Strings
+#Subscripting
+print("Happy"[0]) #to print first character
+print("Happy"[-1]) #to print last character
+
+#2.Integer
+print(123 + 456)
+#Large Integres
+print(123_456_789)
+
+#3.Floats
+print(3.14159)
+
+#4.Boolean
+print(True)
+print(False)
+
+
+#TypeError, Checking and Conversion
+#1.Type error
+len(123)
+
+#2.Type Checking
+print(type(123))
+print(type(123_456.22))
+print(type("123"))
+print(type(True))
+print(type(int("123")))
+
+#3.Type Conversion
+print(int("123") + int("456"))
+print("Number of letters in your name: " +
+      str(len(input("Enter your name")))) #convert int to str
+
+
+#Mathematical Operations
+print(123 + 456)
+print(123 - 456)
+print(123 * 456)
+print(123/456)
+print(123//456)
+print(123**456)
+
+#PEMDAS (),**,*,/,+,-
+print(int(3 * 3 + 3 / 3 - 3)) #By default the result prints float
+
+
+#1.Number Manipulation
+bmi = 84 / 1.65 ** 2
+print(bmi)
+print(int(bmi))
+print(round(bmi))
+print(round(bmi,3))
+
+#2.Assignment Operators
+score = 0
+#User scores a point
+score += 1
+print(score)
+
+#3.F Strings
+print("Your score is " + str(score))
+score = 0
+height = 1.8
+is_winning = True
+print(f"Your score is = {score}\n your height is {height}\n You are winning is {is_winning}")
+#f strings will automatically convert datatype
+
+
+#Tip Calculator Project
+print("Welcome to Tip Calculator")
+bill = float(input("What is the total bill? $"))
+tip = int(input("How much tip would you like to give? 10, 12 or 15"))
+split = int(input("How many people to split the bill?"))
+tip_as_percent = tip / 100
+total_tip_amount = bill * tip_as_percent
+total_bill = bill + total_tip_amount
+bill_per_person = round(total_bill / split,2)
+print(f"Your bill amount is: {bill_per_person}")
+
+
+
