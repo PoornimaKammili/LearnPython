@@ -1,0 +1,65 @@
+#for loop with python lists
+fruits = ['Apple','Grapes','Pear']
+for i in fruits:
+    print(i)
+    print(i + " Pie")
+print(fruits)
+
+
+#Highest score
+student_scores = [180, 124, 165, 173, 189, 169, 146]
+total_scores = sum(student_scores)
+maximum_score = max(student_scores)
+print(maximum_score)
+print(total_scores)
+#Print sum using loop
+sum = 0
+for score in student_scores:
+    sum += score
+print(sum)
+#Print max score using loop
+max_score = 0
+for score in student_scores:
+    if score > max_score:
+        max_score = score
+print(max_score)
+
+
+#For loops with Range function
+#Add 1 to 100 numbers
+sum = 0
+for i in range(0,101):
+    sum += i
+print(sum)
+
+#FizzBuzz
+number = 0
+for i in range(1,101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+
+#Password Generator
+import random as rand
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+print("Welcome to PyPassword Generator")
+letters_count = int(input("How many letters would you like in your password? "))
+symbols_count = int(input("How many symbols would you like in your password? "))
+numbers_count = int(input("How many numbers would you like in your password? "))
+random_letters = rand.choices(letters,k = letters_count)
+random_symbols = rand.choices(symbols,k = symbols_count)
+random_numbers = rand.choices(numbers,k = numbers_count)
+random_password = random_letters + random_symbols + random_numbers
+print(random_password)
+generated_password = ''
+for password in random_password:
+    generated_password += password
+print(f"Your generated password is {generated_password}")
