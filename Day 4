@@ -1,0 +1,100 @@
+#Random Module
+import random as rand
+random_integer = rand.randint(1,5)
+print(random_integer)
+
+random_number_0_to_1 = rand.random() * 10 #greater than 0 less than 1
+print(random_number_0_to_1)
+
+random_float = rand.uniform(1,10) #for random floating values
+print(random_float)
+
+#Heads or tails
+heads_tails = rand.randint(1,2)
+if heads_tails == 1:
+    print("Heads")
+else:
+    print("Tails")
+
+
+#Lists
+fruits = ["Cherry", "Apple", "Pear", "Papaya", "Grapes", "Strawberry"]
+print(fruits[0])
+print(fruits[-2])
+fruits[1] = "Custard Apple"
+fruits.append("Coconut")
+fruits.extend(["Black Grapes"])
+fruits.insert(0,"Blueberry")
+print(fruits)
+
+
+#Banker Roulette Project
+import random as rand
+friends = ['Poornima','Venkat','Akhil','Kinnu','Dharu','Nikhi','Tanvi','Srija','Nitya']
+print(rand.choice(friends))
+print(rand.choices(friends,weights=None,k=3))
+print(rand.sample(friends,k=2)) #Ensures each element is selected atleast once
+#Option 2
+random_index = rand.randint(0,8)
+print(friends[random_index])
+
+#Index Error
+fruits = ["Cherry", "Apple", "Pear", "Papaya", "Grapes", "Strawberry"]
+print(len(fruits))
+print(fruits[7]) #IndexError: list index out of range
+
+#Nested Lists
+fruits2 = ["Cherry", "Apple", "Pear"]
+veg = ["Cucumber", "Kale", "Spinach"]
+dirty_dozen = [fruits2,veg]
+print(dirty_dozen)
+
+#Rock, Paper & Scissors
+import random as rand
+your_choice = int(input("What do you want to choose? Type 0 for Rock 1 for Paper and 2 for Scissors"))
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+if your_choice == 0:
+    print(rock)
+elif your_choice == 1:
+    print(paper)
+elif your_choice == 2:
+    print(scissors)
+else:
+    print("You selected invalid choice")
+choice_list = [rock,paper,scissors]
+computer_choice = rand.randint(0,2)
+print(f"Computer chose {computer_choice}")
+print(choice_list[computer_choice])
+if your_choice == 0 and computer_choice == 0 or your_choice == 1 and computer_choice == 1 or your_choice == 2 and computer_choice == 2:
+    print("It's a tie")
+elif your_choice == 0 and computer_choice == 1 or your_choice == 2 and computer_choice == 1 or your_choice == 2 and computer_choice == 0:
+    print("You loose")
+elif your_choice == 1 and computer_choice == 0 or your_choice == 1 and computer_choice == 2 or your_choice == 0 and computer_choice == 2:
+    print("You win")
+
+
